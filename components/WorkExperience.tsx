@@ -49,7 +49,7 @@ const WorkExperience = () =>{
         <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{item.startDate} - {item.endDate}</time>
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.jobTitle} at {item.companyName}</h3>
         
-        <ol className="text-base text-gray-700">
+        <ol className="text-base text-gray-700 dark:text-gray-300">
             {item.description.map((desc, index)=>(
                 <li key={index}> {desc} </li>
             ))}
