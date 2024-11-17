@@ -100,7 +100,7 @@ const DATA = {
 
 export function CustomDock() {
 
-        const {theme: resolvedTheme, setTheme } = useTheme();
+        const {resolvedTheme, setTheme } = useTheme();
         const [isMobile, setIsMobile] = useState(false);
         const [isMounted, setIsMounted] = useState(false)
     
@@ -116,6 +116,13 @@ export function CustomDock() {
             window.removeEventListener("resize",handleResize)
         };
     },[])
+
+    const toggleTheme = () =>{
+        if(resolvedTheme === "light"){
+            setTheme("dark")
+        }
+        else setTheme("light")
+    }
 
     if (!isMounted) return null;
 
@@ -177,16 +184,15 @@ export function CustomDock() {
                   variant = "ghost"
                   size="icon"
                   className="size-12 rounded-full flex items-center justify-center"
+                  onClick={toggleTheme}
                 >
                   {resolvedTheme === "light" ? (
                     <Moon
                       className="h-[1.2rem] w-[1.2rem] "
-                      onClick={() => setTheme("dark")}
                     />
                   ) : (
                     <Sun
                       className="h-[1.2rem] w-[1.2rem] "
-                      onClick={() => setTheme("light")}
                     />
                   )}
                   <span className="sr-only">Toggle theme</span>
