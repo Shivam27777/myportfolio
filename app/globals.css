@@ -11,3 +11,20 @@ body {
     --radius: 0.5rem;
   }
 }
+/* @layer base{
+  body {
+      @apply dark:bg-gray-800 bg-white
+  }
+} */
+
+/* Light circle effect */
+.light-effect {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 10%, rgba(255, 255, 255, 0) 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
