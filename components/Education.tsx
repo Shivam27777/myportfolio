@@ -1,3 +1,4 @@
+"use client";
 interface EducationItem {
     startDate: string;  // Start date of the education
     endDate: string;    // End date of the education (completion year)

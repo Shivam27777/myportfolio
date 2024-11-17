@@ -1,4 +1,4 @@
-
+"use client";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -6,7 +6,7 @@ interface ProjectItem {
     title: string; // The name of the project
     description: string; // Brief description of the project
     code: string; // Link to the source code repository
-    link?: string; // Link to the live demo (optional)
+    link: string; // Link to the live demo (optional)
     previewVideo?: string; // Link to a preview video (optional)
     technologies: string[]; // List of technologies used in the project
   }

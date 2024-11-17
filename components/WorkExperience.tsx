@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+"use client";
 interface WorkExperienceItem {
     startDate: string; 
     endDate: string;   
