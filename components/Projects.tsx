@@ -43,14 +43,14 @@ const Projects = () =>{
         <div className="flex-col flex gap-4 ">
             <h1 className="text-2xl font-bold">Projects</h1>
             
-    <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">               
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-4">               
     {projectData.map((item, index) => (
         <div className="flex flex-col border border-gray-100 rounded-md dark:border-gray-800" key={index}>
             <video src={item?.previewVideo} autoPlay muted className="w-full h-full rounded-t-sm"/>
             <div className="flex flex-col gap-2 p-2">
                 <h2 className="text-lg font-bold ">{item.title}</h2>
                 <p className="text-base text-gray-500"> {item.description}</p>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                     {item.technologies.map((tech,index)=>(
                         <div key={index} className="flex border border-gray-200 rounded-md px-2 py-1 text-sm bg-gray-500 text-white ">{tech}</div>
                     ))}
