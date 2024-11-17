@@ -28,7 +28,7 @@ interface EducationItem {
       endDate: "2015",   // Completion year of X
       schoolName: "Dewan Public School",
       courseName: "X (CGPA: 9)",
-      address: "New Delhi, India"
+      address: "Meerut, India"
     }
   ];
 
